@@ -1,12 +1,15 @@
-
+/*
+brown color: #440506;
+yellow color: #fff319;
+*/
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 
 body {
-  background: #fff319;/*#fff8ba;/*#FCDE42;*/ */
+  background: #fff;/*#fff8ba;/*#FCDE42;#fff319 */
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   color: #000;
@@ -16,10 +19,7 @@ body {
   background: #fff8ba;
 }
 
-#btnBookOrder:hover{
-  color:black;
-  background-color:  #B77E30;
-}
+
 
 #btnModalFooter:hover{
   color:black;
@@ -100,16 +100,19 @@ h3{
 
 .btn-common {
   font-size: 14px;
-  color: #797979;
-  border: 1px solid #dbb075;
+  /* color: #797979;
+  border: 1px solid #dbb075; */
+  color:#440506;
+  background-color: #fff319;
+  border:1px solid  #fff319;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   padding: 10px 25px;
+  letter-spacing: 1.08px;
 }
 
 #action .col-sm-5{
   position: absolute;
-
   top: 0;
   height: 100%;
   right: 0;
@@ -119,9 +122,17 @@ h3{
 .btn-common:hover,
 .btn-common:focus{
   outline: none;
-  background: none;
+  /* background: none;
   box-shadow: none;
-  color: #d29948;
+  color: #d29948; */
+  color: #440506;
+  border:2px solid #fff319;
+  background-color: #fff;
+  transition-duration: 1s;
+  font-weight: 500;
+  box-shadow: 5px 10px #888888;
+  letter-spacing: 1.08px;
+  transition: all 0.5s ease-in-out;
 }
 
 .align-right{
@@ -278,10 +289,10 @@ h3{
 
 #header .navbar-nav.navbar-right >li a {
   color: #000;
-  font-size: 12px;
+  font-size: 16px;
   padding: 20px;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 #header .navbar-inverse .navbar-nav  li.active > a,
@@ -290,11 +301,27 @@ h3{
 .navbar-inverse .navbar-nav > .open > a {
   background-color: inherit;
   border: 0;
-  color: #d29948;
+  color: #440506; /*#d29948;*/
+  border-radius: 7px;
+  font-weight: 500;
+  border-bottom: 4px solid #fff319;
+  /*border-top: 4px solid #fff319;*/
+  letter-spacing: 1.08px;
+}
+
+#header .navbar-inverse .navbar-nav  li.active > a,
+#header .navbar-inverse .navbar-nav  li.active > a:active,
+#header .navbar-nav.navbar-right li > a:active,
+.navbar-inverse .navbar-nav > .open > a {
+  font-weight: 500;
 }
 
 #header .navbar-inverse .navbar-nav  li a:hover{
-  color: #d29948;
+  color: #440506; /*#d29948;*/
+  border-bottom: 4px solid #fff319;
+  /*border-top: 4px solid #fff319;*/
+  transition-duration: 1s;
+  font-weight: 500;
 }
 
 

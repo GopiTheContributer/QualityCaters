@@ -42,8 +42,8 @@
         <div class="col-sm-12 overflow">
           <div class="social-icons pull-left" style="padding:12px">
             <ul class="nav nav-pills">
-              <li><a href="" style="color:black;"><i class="fa fa-phone"></i> 9944085749 / 9444573879 </a></li>
-              <li><a href="mailto:qualitycaters@gmail.com" style="color:black;"><i class="fa fa-envelope"></i> qualitycaters@gmail.com</a></li>
+              <li><a href="" style="color:black;letter-spacing: 1.08px;"><i class="fa fa-phone"></i> 9944085749 / 9444573879 </a></li>
+              <li><a href="mailto:qualitycaters@gmail.com" style="color:black;letter-spacing: 1.08px;"><i class="fa fa-envelope"></i> qualitycaters@gmail.com</a></li>
               <!-- <li><a href=""><i class="fa fa-twitter"></i></a></li>
               <li><a href=""><i class="fa fa-google-plus"></i></a></li>
               <li><a href=""><i class="fa fa-dribbble"></i></a></li>
@@ -51,10 +51,10 @@
             </ul>
           </div>
           <div class="social-icons pull-right" style="padding:12px">
-            <ul class="nav nav-pills" style="color:black;">
-              <li><a href="" style="color:black;"><i class="fa fa-facebook"></i></a></li>
+            <ul class="nav nav-pills" style="color:black;letter-spacing: 1.08px;">
+              <li><a href="https://www.facebook.com/Quality-Caters-928129070573143/" target="_blank" style="color:black;"><i class="fa fa-facebook"></i></a></li>
               <li>
-                <a href="" id="btnLogin" id="btnLogin" data-toggle="modal" data-target="#myModal" style="color:black;">Login</a></li>
+                <a href="" id="btnLogin" id="btnLogin" data-toggle="modal" data-target="#myModal" style="color:black;letter-spacing: 1.08px;">Login</a></li>
               </ul>
             </li>
             <!-- <li><a href=""><i class="fa fa-twitter"></i></a></li>
@@ -163,15 +163,15 @@
 </header>
 <!--/#header-->
 
-<section id="home-slider" >
+<section id="home-slider" style="height:580px;">
   <div class="container">
-    <div class="main-slider" style="  background-image:url(images/bg.jpg);background-repeat:no-repeat;background-position: center top; min-widht:100%;min-height:100%;overflow:visible;position: relative;vertical-align: top;">
+    <div class="main-slider">
 
-  <div class="slide-text">
-    <h1>Dine With Us</h1>
-    <p>Making every celebration special and every occasion memorable at Thendral's Quality Caters the best catering services in Tiruvallur. </p>
-    <a href="#bookorder" id="btnBookOrder" class="btn btn-common">Book Order</a>
-  </div>
+      <div class="slide-text">
+        <h1>Dine With Us</h1>
+        <p style="letter-spacing: 1.08px;">Making every celebration special and every occasion memorable at Thendral's Quality Caters the best catering services in Tiruvallur. </p>
+        <a href="#bookorder" id="btnBookOrder" class="btn btn-common">BOOK ORDER</a>
+      </div>
 
       <img src="images/home/slider/slide1/house.png" class="img-responsive slider-house" alt="slider image">
       <img src="images/home/slider/slide1/circle1.png" class="slider-circle1" alt="slider image">
@@ -194,37 +194,37 @@
         <div class="">
           <h2 class="text-center" style="font-size:33px !important; line-height:22px; font-weight:450; padding-bottom:20px;padding-top:34px;color:#fff;">Why Thendral Caterars</h2>
         </div>
-         <div class="col-sm-4 text-center  wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <!-- <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
-              <img class="menu-image" src="images/Versatilemenu.jpg" alt="" style="width:100%;height:100%;background-position: center top;">
-            </div> -->
-            <h2 style="font-size:24px; line-height:22px; font-variant: small-caps; font-weight: bold;font-weight:450;color:#fff;padding:34px;">Versatile Menu</h2>
-            <!-- <p style="color:#fff;">Not sure what to serve at your event? Not sure how to prepare or present?. We are here. We sit down with you and explain every detail of what will be served to your guests. We also provide Customization of menus.</p> -->
-        </div>
-        <!-- <div class="col-sm-4 text-center  wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
-          <div class="single-service menu-item menu-bg"  data-toggle="modal" data-target="#marriage">
-            <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
-              <img class="menu-image" src="images/attention.jpg" alt="" style="width:100%;height:100%;background-position: center top;">
-            </div>
-            <h2 style="font-size:24px; line-height:22px; font-variant: small-caps; font-weight: bold;font-weight:450;">Attention to Detail</h2>
-            <p>As a catering company, we take time to perfect and present your food and beverage options in a way that will wow your guests. We can adapt to any venue environment to make sure your food and beverages fit the scene and look perfect.</p>
-          </div>
-        </div>
-        <div class="col-sm-4 text-center  wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
-          <div class="single-service menu-item menu-bg" data-toggle="modal" data-target="#marriage">
-            <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
-              <img class="menu-image" src="images/buffet.jpg" alt="" style="width:100%;height:100%;background-position: center top;">
-            </div>
-            <h2 style="font-size:24px; line-height:22px; font-variant: small-caps; font-weight: bold;font-weight:450;">All in one package</h2>
-            <p>We put our maximum effort to make a pleasent event.</p>
-          </div>
+        <div class="col-sm-4 text-center  wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+          <!-- <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+          <img class="menu-image" src="images/Versatilemenu.jpg" alt="" style="width:100%;height:100%;background-position: center top;">
         </div> -->
+        <h2 style="font-size:24px; line-height:22px; font-variant: small-caps; font-weight: bold;font-weight:450;color:#fff;padding:34px;">Versatile Menu</h2>
+        <!-- <p style="color:#fff;">Not sure what to serve at your event? Not sure how to prepare or present?. We are here. We sit down with you and explain every detail of what will be served to your guests. We also provide Customization of menus.</p> -->
       </div>
+      <!-- <div class="col-sm-4 text-center  wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+      <div class="single-service menu-item menu-bg"  data-toggle="modal" data-target="#marriage">
+      <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
+      <img class="menu-image" src="images/attention.jpg" alt="" style="width:100%;height:100%;background-position: center top;">
     </div>
+    <h2 style="font-size:24px; line-height:22px; font-variant: small-caps; font-weight: bold;font-weight:450;">Attention to Detail</h2>
+    <p>As a catering company, we take time to perfect and present your food and beverage options in a way that will wow your guests. We can adapt to any venue environment to make sure your food and beverages fit the scene and look perfect.</p>
   </div>
+</div>
+<div class="col-sm-4 text-center  wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
+<div class="single-service menu-item menu-bg" data-toggle="modal" data-target="#marriage">
+<div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
+<img class="menu-image" src="images/buffet.jpg" alt="" style="width:100%;height:100%;background-position: center top;">
+</div>
+<h2 style="font-size:24px; line-height:22px; font-variant: small-caps; font-weight: bold;font-weight:450;">All in one package</h2>
+<p>We put our maximum effort to make a pleasent event.</p>
+</div>
+</div> -->
+</div>
+</div>
+</div>
 </section>
 
-  <a href="" id="about"></a>
+<a href="" id="about"></a>
 <section id="features">
   <div class="container">
     <div class="row">
@@ -244,7 +244,7 @@
         </div>
       </div>
     </section>
-<!-- modal for marriage -->
+    <!-- modal for marriage -->
     <div class="modal fade" id="marriage" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -265,8 +265,8 @@
         </div>
       </div>
     </div>
-<!-- end of modal marriage  -->
-<a href="#" id="menu"></a>
+    <!-- end of modal marriage  -->
+    <a href="#" id="menu"></a>
     <section id="menu" style="background-image:url(images/menubg1.jpg);background-repeat:no-repeat;background-position: center top; min-widht:100%;min-height:100%;overflow:visible;position: relative;vertical-align: top;">
       <div style="background-color: rgba(0, 0, 0, 0.59);">
         <div class="container"  style="padding:20px;">
@@ -336,23 +336,23 @@
     </section>
 
     <!-- <section id="action" class="responsive">
-      <div class="vertical-center" style="background: #fff8ba;">
-        <div class="container">
-          <div class="row">
-            <div class="action take-tour">
-              <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                <h1 class="title">Display clients name</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas interdum lacinia ante eget finibus.</p>
-              </div>
-              <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-              <div class="tour-button">
-              <a href="#" class="btn btn-common">TAKE THE TOUR</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="vertical-center" style="background: #fff8ba;">
+    <div class="container">
+    <div class="row">
+    <div class="action take-tour">
+    <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+    <h1 class="title">Display clients name</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas interdum lacinia ante eget finibus.</p>
   </div>
+  <div class="col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+  <div class="tour-button">
+  <a href="#" class="btn btn-common">TAKE THE TOUR</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section> -->
 <!--/#action-->
 <a href="" id="gallery"></a>

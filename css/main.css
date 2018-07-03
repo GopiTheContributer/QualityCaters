@@ -7,12 +7,13 @@ yellow color: #fff319;
 @import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 
 body {
-  background: #fff;/*#fff8ba;/*#FCDE42;#fff319 */
+  background: #fff319;/*#fff8ba;/*#FCDE42;#fff319 */
   font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 22px;
   color: #000;
+    letter-spacing: 1.08px;
 }
 
 .bgColor{
@@ -318,7 +319,7 @@ h3{
 
 #header .navbar-inverse .navbar-nav  li a:hover{
   color: #440506; /*#d29948;*/
-  border-bottom: 4px solid #fff319;
+  border-bottom: 4px solid #fff;
   /*border-top: 4px solid #fff319;*/
   transition-duration: 1s;
   font-weight: 500;
@@ -870,12 +871,13 @@ ul.sub-menu {
   color: red;
   font-family: 'Lato', sans-serif;
   font-weight: 500;
+
 }
 
 .success-error-msg{
   color: #0f0;
   font-family: 'Lato', sans-serif;
-  font-weight: 300;
+  font-weight: 900;
 }
 
 .menu-bg{
@@ -896,8 +898,35 @@ ul.sub-menu {
 
 .contact-error-msg{
   background-color: red;
+  padding:15px;
+  margin:0px auto;
+  border-radius: 7px;
+  color:#fff;
+}
+
+.contact-success-msg{
+  background-color: #0f0;
+  padding:15px;
+  border-radius: 7px;
+  color:#fff;
 }
 
 .carosel-design{
   padding:34px;
+}
+
+#carousel-container{
+  width:100% !important;
+  height:100% !important;
+}
+
+
+.create-event{
+  background-color: black;
+  color:#fff;
+  padding:12px;
+  letter-spacing: 1.08px;
+  margin:15px;
+  position:absolute;
+  border-radius:7px;
 }

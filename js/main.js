@@ -1,17 +1,14 @@
 $(document).ready(function(){
 	$('#currentYear').text((new Date).getFullYear());
 });
+
 //date time picker code
 $( function() {
-    $( "#eventDate" ).datepicker({ dateFormat: 'yy-mm-dd' });
-    // $( "#anim" ).on( "change", function() {
-    //   $( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
-    // });
-  } );
+	$( "#eventDate" ).datepicker({ dateFormat: 'yy-mm-dd' });
+});
 //end of date time picker code
 
 jQuery(function($) {'use strict';
-
 //Responsive Nav
 $('li.dropdown').find('.fa-angle-down').each(function(){
 	$(this).on('click', function(){
@@ -248,27 +245,41 @@ $('#btnOrder').click(function(){
 
 //contact button press event
 $('#btnContactSubmit').click(function() {
+	debugger;
+	let givenEmail = $('#contactEmail').val();
 
-if($('#contactName').val() == '' || $('#contactEmail').val()){
-	$('#btnContactSubmit').empty().addClass('contact-error-msg').attr('value','fields are mandatory');
-	setTimeout(function () {		 $('#btnContactSubmit').removeClass('contact-error-msg').addClass('btn btn-submit').attr('value','Submit'); }, 3000);
-	$('#contactName').focus();
-	return;
-}
+	if($('#contactName').val() == '' || givenEmail == ''){
+		setTimeout(function() { $('#contact-message').empty().addClass('contact-error-msg').text('All fields are mandatory')}, 3000);
+		$('#contactName').focus();
+		return;
+	}
+	debugger;
+	if(givenEmail != ''){
+		var validateEmailFormat = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+		if (!validateEmailFormat.test(givenEmail)){
+			setTimeout(function(){$('#contact-message').empty().addClass('contact-error-msg').text('Email not in format')}, 3000);
+			return;
+		}
+	}
 
-$.ajax({
-	url:'contact.php',
-	data:{'contactName': $('#contactName').val(), 'contactMail': $('#contactEmail').val(), 'message': $('#message').val()},
-	dataType:'json',
-	type:'POST',
-	success:function(contactResult){
-		if(contactResult== 'contact added')
-		{
+	$.ajax({
+		url:'contact.php',
+		data:{'contactName': $('#contactName').val(), 'contactMail': $('#contactEmail').val(), 'message': $('#message').val()},
+		dataType:'json',
+		type:'POST',
+		success:function(contactResult){
+			if(contactResult== 'contact added')
+			{
+				setTimeout(function() { $('#contact-message').empty().removeClass('contact-error-msg').text('Thanks for contacting us.')}, 3000);
 
-		}else {}
-	},
-	error:function(xhr, status, error){var err = eval(xhr.responseText);
-	console.log(err);}
-});
+				$('#contactName').val('');
+				$('#contactEmail').val('');
+				$('#message').val('');
+				$('#contactName').focus();
+			}else {}
+		},
+		error:function(xhr, status, error){var err = eval(xhr.responseText);
+			console.log(err);}
+		});
 
-});
+	});

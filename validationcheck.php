@@ -6,20 +6,19 @@ $password = $_POST['password'];
 
 $mysql_connection = new mysqli('localhost', 'root', 'root', 'qualitycaters');
 
-if(!$mysql_connection){
+if($mysql_connection->connect_error){
 	die('got connection error ' + mysqli_error());
 }
 
-$queryResult = mysqli_query($mysql_connection, "SELECT * FROM login WHERE username = '$username' and PASSWORD = '$password' ");
-$fetchedRowsCount = mysqli_num_rows($queryResult);
+$queryResult = $mysql_connection->query("SELECT * FROM login WHERE username = '$username' and PASSWORD = '$password' ") or die("couldn't able to execute the query");
 
-if($fetchedRowsCount == 1){
+if($queryResult->num_rows == 1){
 	echo json_encode('valid login');
-	$_SESSION['user'] = $username;
+	$_SESSION['user'] = 'Thendral Caters';
 }
 else {
 	echo json_encode('invalid login');
 }
 
-mysqli_close($mysql_connection);
+$mysql_connection->close();
 ?>

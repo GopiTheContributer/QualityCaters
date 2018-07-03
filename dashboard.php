@@ -1,9 +1,11 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="thendral quality caters">
+  <meta name="description" content="thendral quality caters, catering">
   <meta name="author" content="TechCreators">
   <title>Quality Caters</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -12,7 +14,8 @@
   <link href="css/lightbox.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
-
+  <link href="css/jqgrid.css" rel="stylesheet">
+  <link href="css/jqueryui.css" rel="stylesheet">
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
   <script src="js/respond.min.js"></script>
@@ -23,148 +26,123 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 
-  <script>
-  $(document).ready(function(){
-    $('#currentYear').text((new Date).getFullYear());
-    $('#username').val('');
-    $('#password').val('');
-    $('#username').focus();
-  });
-</script>
+</head>
 
-</head><!--/head-->
-
-<body>
+<body style="background-color:#fff;">
   <header id="header">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 overflow">
-          <div class="social-icons pull-left" style="padding:12px">
-            <ul class="nav nav-pills">
-              <li><a href="" style="color:black;"><i class="fa fa-phone"></i> 9944085749 / 9444573879 </a></li>
-              <li><a href="mailto:qualitycaters@gmail.com" style="color:black;"><i class="fa fa-envelope"></i> qualitycaters@gmail.com</a></li>
-              <!-- <li><a href=""><i class="fa fa-twitter"></i></a></li>
-              <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-              <li><a href=""><i class="fa fa-dribbble"></i></a></li>
-              <li><a href=""><i class="fa fa-linkedin"></i></a></li> -->
-            </ul>
-          </div>
           <div class="social-icons pull-right" style="padding:12px">
             <ul class="nav nav-pills" style="color:black;">
-              <li><a href="" style="color:black;"><i class="fa fa-facebook"></i></a></li>
-              <li>
-                <a href="" id="btnLogin" id="btnLogin" data-toggle="modal" data-target="#myModal" style="color:black;">Login</a></li>
-              </ul>
-            </li>
-            <!-- <li><a href=""><i class="fa fa-twitter"></i></a></li>
-            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-            <li><a href=""><i class="fa fa-dribbble"></i></a></li>
-            <li><a href=""><i class="fa fa-linkedin"></i></a></li> -->
-          </ul>
-        </div>
+              <span id="admin"><i class="fa fa-user" aria-hidden="true"></i><?php echo isset($_SESSION['user']) ? 'Welcome, ' . $_SESSION['user'] . ' ' : header('location: index.php'); ?><a href="logout.php">Logout </a><i class="fa fa-sign-out" aria-hidden="true"></i>
+              </span>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Modal -->
-  <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+<div class="navbar navbar-inverse" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 
-      <!-- Modal content-->
-      <div class="modal-content bgColor">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Quality Caters - Admin Login</h4>
-        </div>
-        <div class="modal-body">
-          <div class="login-form-design">
-            <div class="text-center header-login-form" style="padding: 12px;"></div>
-            <div style="padding:12px;">
-              <input type="text" id="username" placeholder="Enter username" maxlength="25" class="form-control">
-            </div>
-            <div style="padding:12px;">
-              <input type="password" id="password" placeholder="Enter password" maxlength="15" class="form-control">
-            </div>
-            <div id="err" class="text-center" style="color:red;"></div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" id="btnModalFooterClose" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" id="btnModalFooter" class="btn btn-default">Login</button>
-        </div>
-      </div>
+      <a class="navbar-brand" href="index.php">
+        <h1><img src="images/logo.png" alt="Quality Caters"></h1>
+      </a>
 
     </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="index.php">HOME</a></li>
+      </ul>
+    </div>
   </div>
-  <!-- modal end -->
-
-
-  <div class="navbar navbar-inverse" role="banner" style="background: #fff8ba;">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-
-        <a class="navbar-brand" href="index.html">
-          <h1><img src="images/logo.png" alt="Quality Caters"></h1>
-        </a>
-
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="index.html">HOME</a></li>
-          <li class="dropdown"><a href="#about">ABOUT US</a>
-            <!--  <i class="fa fa-angle-down"></i></a>
-            <ul role="menu" class="sub-menu">
-            <li><a href="#">Page1</a></li>
-            <li><a href="#">Page2</a></li>
-          </ul> -->
-        </li>
-        <li class="dropdown"><a href="blog.html">MENU</a>
-          <!-- <i class="fa fa-angle-down"></i></a>
-          <ul role="menu" class="sub-menu">
-          <li><a href="#">Lorem ipsum dolor</a></li>
-          <li><a href="#">Lorem ipsum dolor</a></li>
-        </ul> -->
-      </li>
-      <li class="dropdown"><a href="portfolio.html">GALLERY</a></li>
-      <li class="dropdown"><a href="portfolio.html">TESTIMONIAL</a>
-        <!-- <i class="fa fa-angle-down"></i></a>
-        <ul role="menu" class="sub-menu">
-        <li><a href="#">Lorem ipsum dolor</a></li>
-        <li><a href="#">Lorem ipsum dolor</a></li>
-      </ul> -->
-    </li>
-    <li class="dropdown"><a href="portfolio.html">CONTACT US </a>
-      <!-- <i class="fa fa-angle-down"></i></a>
-      <ul role="menu" class="sub-menu">
-      <li><a href="#">Lorem ipsum dolor</a></li>
-      <li><a href="#">Lorem ipsum dolor</a></li>
-    </ul> -->
-  </li>
-  <!-- <li><a href="application.html">Application</a></li> -->
-</ul>
-</div>
-<!-- <div class="search">
-<form role="form">
-<i class="fa fa-search"></i>
-<div class="field-toggle">
-<input type="text" class="search-form" autocomplete="off" placeholder="Search">
-</div>
-</form>
-</div> -->
-</div>
 </div>
 </header>
 <!--/#header-->
 
+<div id="tab-container" class="container-fluid">
+  <div class="row" style="height:540px;">
+    <div class="col-md-12 col-sm-4">
+      <ul id="tab1" class="nav nav-tabs">
+        <li class="active"><a href="#tab1-item1" data-toggle="tab">Orders</a></li>
+        <li id="event-tab"><a href="#tab1-item2" data-toggle="tab">Event</a></li>
+        <!-- <li><a href="#tab1-item3" data-toggle="tab">Tab 3</a></li> -->
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade active in" id="tab1-item1">
+          <section>
+            <div id="features-hire" class="wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+              <div class="container-fluid">
+                <!-- <div class="row"> -->
+                <div class="col-sm-12 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                  <div class="contact-form bottom">
+                    <div style="padding:30px;">
+                    </div>
+                    <div class="col-lg-12">
+                      <!-- jqgrid code -->
+                      <div class="container-fluid">
+                        <table class="table" id="jqgrid"></table>
+                        <div id="pager"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- </div> -->
+                </div>
+              </div>
+            </section>
 
-
-welcome to dashboard
+          </div>
+          <div class="tab-pane fade" id="tab1-item2">
+            <!-- create event -->
+            <section>
+              <div id="features-hire" class="wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-12 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                      <div class="contact-form bottom">
+                        <div style="padding:30px;">
+                          Events created on this page will get added to the events dropdown automatically.
+                        </div>
+                        <div class="row" style="padding:15px;">
+                          <div class="form-group col-md-4">
+                            <input type="text" id="txtname" name="name" class="form-control" maxlength="25" required="required" placeholder="EVENT NAME">
+                          </div>
+                          <div class="form-group col-md-3" style="margin-top:-2px !important;">
+                            <input type="button" id="btnCreateEvent" name="submit" class="btn  btn-submit" value="Create Event">
+                          </div>
+                          <div class="form-group col-md-5" style="margin-top:-4px !important;">
+                            <span id="createEvent"></span>
+                          </div>
+                        </div>
+                        <div class="container">
+                          <table class="table" id="event"></table>
+                          <div id="event-pager"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- end event create -->
+          </div>
+          <!-- <div class="tab-pane fade" id="tab1-item3">
+          <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div><!--/#table-container-->
 
 
 
@@ -173,72 +151,10 @@ welcome to dashboard
 <footer id="footer">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 text-center bottom-separator">
-        <img src="images/home/under.png" class="img-responsive inline" alt="">
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <div class="testimonial bottom">
-          <h2>Testimonial</h2>
-          <div class="media">
-            <div class="pull-left">
-              <a href="#"><img src="images/home/profile1.png" alt=""></a>
-            </div>
-            <div class="media-body">
-              <blockquote>Nisi commodo bresaola, leberkas venison eiusmod bacon occaecat labore tail.</blockquote>
-              <h3><a href="#">- Jhon Kalis</a></h3>
-            </div>
-          </div>
-          <div class="media">
-            <div class="pull-left">
-              <a href="#"><img src="images/home/profile2.png" alt=""></a>
-            </div>
-            <div class="media-body">
-              <blockquote>Capicola nisi flank sed minim sunt aliqua rump pancetta leberkas venison eiusmod.</blockquote>
-              <h3><a href="">- Abraham Josef</a></h3>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="contact-info bottom">
-          <h2>Contacts</h2>
-          <address>
-            E-mail: <a href="mailto:qualitycaters@gmail.com">qualitycaters@gmail.com</a> <br>
-            Phone: 9944085749 / 9444573879 <br>
-          </address>
-
-          <h2>Address</h2>
-          <address>
-            #43/392 B Indira Ganthi Salai,<br>
-            Rajaji puram,<br>
-            (near by GRT Thanga Maaligai)<br>
-            Tiruvallur-602001
-          </address>
-        </div>
-      </div>
-      <div class="col-md-4 col-sm-12">
-        <div class="contact-form bottom">
-          <h2>Send a message</h2>
-          <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
-            <div class="form-group">
-              <input type="text" name="name" class="form-control" required="required" placeholder="Name">
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" class="form-control" required="required" placeholder="Email Id">
-            </div>
-            <div class="form-group">
-              <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>
-            </div>
-            <div class="form-group">
-              <input type="submit" name="submit" class="btn btn-submit" value="Submit">
-            </div>
-          </form>
-        </div>
-      </div>
       <div class="col-sm-12">
         <div class="copyright-text text-center">
           <p>&copy; Quality Caters <span id="currentYear"></span>. All Rights Reserved.</p>
-          <p>Designed and maintained by <a target="_blank" href="#">TechCreators</a></p>
+          <p>Designed and maintained by <a target="_blank" href="https://gopithecontributer.github.io">TechCreators</a></p>
         </div>
       </div>
     </div>
@@ -247,9 +163,14 @@ welcome to dashboard
 <!--/#footer-->
 
 <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquerymigrate.js"></script>
+<script type="text/javascript" src="js/grid.locale-en.js"></script>
+<script type="text/javascript" src="js/jqGrid.js"></script>
+<script type="text/javascript" src="js/jqueryui.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/lightbox.min.js"></script>
 <script type="text/javascript" src="js/wow.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/dashboard.js"></script>
 </body>
 </html>
